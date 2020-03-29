@@ -8,6 +8,9 @@ $ brew tap SwiftDocOrg/formulae
 
 - **[swift-doc][swift-doc]**:
   Swift documentation generator.
+- **[docsetutil][docsetutil]**:
+  Apple developer tool for working with .docset bundles
+  _(removed in Xcode 9.3; this is an unofficial mirror)_
 
 ## License
 
@@ -18,3 +21,4 @@ $ brew tap SwiftDocOrg/formulae
 Mattt ([@mattt](https://twitter.com/mattt))
 
 [swift-doc]: https://github.com/SwiftDocOrg/swift-doc
+[docsetutil]: 
