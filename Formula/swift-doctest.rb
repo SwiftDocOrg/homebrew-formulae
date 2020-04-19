@@ -1,7 +1,7 @@
 class SwiftDoctest < Formula
   desc "Swift documentation tester"
   homepage "https://github.com/SwiftDocOrg/DocTest"
-  url "https://github.com/SwiftDocOrg/DocTest.git", :tag => "0.0.1", :revision => "a0a41e608ed8ffeec71ca4a16a5cee7aa06fd3b3"
+  url "https://github.com/SwiftDocOrg/DocTest.git", :tag => "0.0.2", :revision => "c02403705966011f81d3472eb2c1faa223cbd426"
   head "https://github.com/SwiftDocOrg/swift-doc.git", :shallow => false
 
   depends_on :xcode => ["11.4", :build]
