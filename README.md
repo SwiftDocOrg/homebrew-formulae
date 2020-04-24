@@ -21,4 +21,4 @@ $ brew tap SwiftDocOrg/formulae
 Mattt ([@mattt](https://twitter.com/mattt))
 
 [swift-doc]: https://github.com/SwiftDocOrg/swift-doc
-[docsetutil]: 
+[docsetutil]: https://github.com/SwiftDocOrg/docsetutil
