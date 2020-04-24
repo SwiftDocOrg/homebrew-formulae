@@ -5,6 +5,7 @@ class SwiftDoc < Formula
   head "https://github.com/SwiftDocOrg/swift-doc.git", :shallow => false
 
   depends_on :xcode => ["11.4", :build]
+  depends_on "graphviz" => :recommended
 
   def install
     system "make", "install", "prefix=#{prefix}"
