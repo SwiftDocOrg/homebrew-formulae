@@ -8,6 +8,8 @@ $ brew tap SwiftDocOrg/formulae
 
 - **[swift-doc][swift-doc]**:
   Swift documentation generator.
+- **[swift-doctest][doctest]**:
+  An experimental tool for testing Swift example code in documentation.
 - **[docsetutil][docsetutil]**:
   Apple developer tool for working with .docset bundles
   _(removed in Xcode 9.3; this is an unofficial mirror)_
@@ -21,4 +23,5 @@ $ brew tap SwiftDocOrg/formulae
 Mattt ([@mattt](https://twitter.com/mattt))
 
 [swift-doc]: https://github.com/SwiftDocOrg/swift-doc
+[doctest]: https://github.com/SwiftDocOrg/DocTest
 [docsetutil]: https://github.com/SwiftDocOrg/docsetutil
