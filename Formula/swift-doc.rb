@@ -1,7 +1,7 @@
 class SwiftDoc < Formula
   desc "Swift documentation generator"
   homepage "https://github.com/SwiftDocOrg/swift-doc"
-  url "https://github.com/SwiftDocOrg/swift-doc.git", :tag => "1.0.0-beta.2", :revision => "dbb361185b701922f395b385085303a3d8da19e7"
+  url "https://github.com/SwiftDocOrg/swift-doc.git", :tag => "1.0.0-beta.3", :revision => "a2013b64ffbcf91be45e6ecff9e88fdf8019a08d"
   head "https://github.com/SwiftDocOrg/swift-doc.git", :shallow => false
 
   depends_on :xcode => ["11.4", :build]
