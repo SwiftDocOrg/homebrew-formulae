@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Docsetutil < Formula
   desc "Apple developer tool for working with .docset bundles"
   homepage "https://github.com/SwiftDocOrg/DocSetUtil"

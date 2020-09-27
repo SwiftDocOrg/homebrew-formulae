@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SwiftDoc < Formula
   desc "Swift documentation generator"
   homepage "https://github.com/SwiftDocOrg/swift-doc"
