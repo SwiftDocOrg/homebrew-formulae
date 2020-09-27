@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# :nodoc:
 class SwiftDoctest < Formula
   desc "Swift documentation tester"
   homepage "https://github.com/SwiftDocOrg/DocTest"
