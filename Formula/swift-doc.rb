@@ -6,6 +6,8 @@ class SwiftDoc < Formula
   homepage "https://github.com/SwiftDocOrg/swift-doc"
   url "https://github.com/SwiftDocOrg/swift-doc.git", tag: "1.0.0-beta.4", revision: "581af2fe50667ed2f49c53d26b91a8feb4531302"
 
+  license "MIT"
+
   head "https://github.com/SwiftDocOrg/swift-doc.git", shallow: false
 
   bottle do
