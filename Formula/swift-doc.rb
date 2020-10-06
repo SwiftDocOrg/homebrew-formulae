@@ -17,12 +17,18 @@ class SwiftDoc < Formula
     system "swift", "build",
            "-c", "release",
            "--disable-sandbox",
-           "--build-path", "#{buildpath}"
+           "--build-path", buildpath.to_s
 
     libexec.install buildpath/"release/swift-doc" => "swift-doc"
     libexec.install Dir[buildpath/"release/*.bundle"]
 
-    bin.install_symlink libexec/"swift-doc" => "swift-doc"
+    (bin/"swift-doc").tap do |path|
+      path.write <<~SHELL
+        #!/bin/sh
+        exec "#{prefix}/libexec/swift-doc" "$@"
+      SHELL
+      chmod 0555, path
+    end
   end
 
   test do
