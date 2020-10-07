@@ -19,9 +19,39 @@ class SwiftDoc < Formula
            "--disable-sandbox",
            "--build-path", buildpath.to_s
 
+    copy_toolchain_libraries!
+
     libexec.install buildpath/"release/swift-doc" => "swift-doc"
     libexec.install Dir[buildpath/"release/*.bundle"]
 
+    install_shim!
+  end
+
+  test do
+    system bin/"swift-doc"
+  end
+
+  private
+
+  # rubocop:disable Metrics/AbcSize
+  def copy_toolchain_libraries!
+    return unless Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+
+    macho = MachO.open(buildpath/"release/swift-doc")
+    return unless (toolchain = macho.rpaths.find { |path| path.include?(".xctoolchain") })
+
+    cp "#{toolchain}/lib_InternalSwiftSyntaxParser.dylib", buildpath, verbose: true
+    lib.install buildpath/"lib_InternalSwiftSyntaxParser.dylib"
+
+    macho.delete_rpath toolchain
+    macho.change_install_name "@rpath/lib_InternalSwiftSyntaxParser.dylib",
+                              "#{lib}/lib_InternalSwiftSyntaxParser.dylib"
+
+    macho.write!
+  end
+  # rubocop:enable Metrics/AbcSize
+
+  def install_shim!
     (bin/"swift-doc").tap do |path|
       path.write <<~SHELL
         #!/bin/sh
@@ -29,9 +59,5 @@ class SwiftDoc < Formula
       SHELL
       chmod 0555, path
     end
-  end
-
-  test do
-    system "#{bin}/swift-doc"
   end
 end
