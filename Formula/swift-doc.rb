@@ -13,6 +13,12 @@ class SwiftDoc < Formula
   depends_on xcode: ["12", :build]
   depends_on "graphviz" => :recommended
 
+  bottle do
+    root_url "https://github.com/SwiftDocOrg/swift-doc/releases/download/1.0.0-beta.5"
+    cellar :any
+    sha256 "77c1bfb0902dcf1d5ee532c627425c5ef131ead68d9b66223988b2a2f5eff25d" => :catalina
+  end
+
   def install
     system "swift", "build",
            "-c", "release",
