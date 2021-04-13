@@ -15,8 +15,7 @@ class SwiftDoc < Formula
 
   bottle do
     root_url "https://github.com/SwiftDocOrg/swift-doc/releases/download/1.0.0-beta.5"
-    cellar :any
-    sha256 "77c1bfb0902dcf1d5ee532c627425c5ef131ead68d9b66223988b2a2f5eff25d" => :catalina
+    sha256 cellar: :any, catalina: "77c1bfb0902dcf1d5ee532c627425c5ef131ead68d9b66223988b2a2f5eff25d"
   end
 
   def install
