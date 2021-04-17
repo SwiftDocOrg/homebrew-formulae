@@ -11,7 +11,7 @@ class SwiftDoc < Formula
   head "https://github.com/SwiftDocOrg/swift-doc.git", shallow: false
 
   depends_on xcode: ["12", :build]
-  depends_on "graphviz" => :recommended
+  depends_on "graphviz"
 
   bottle do
     root_url "https://github.com/SwiftDocOrg/swift-doc/releases/download/1.0.0-beta.5"
