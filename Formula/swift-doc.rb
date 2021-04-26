@@ -6,14 +6,20 @@ class SwiftDoc < Formula
   homepage "https://github.com/SwiftDocOrg/swift-doc"
   url "https://github.com/SwiftDocOrg/swift-doc.git", tag: "1.0.0-beta.6", revision: "81f2d3a1731204693f41929b76b33e2abb5e4b4c"
 
+  bottle do
+    root_url "https://github.com/SwiftDocOrg/swift-doc/releases/download/1.0.0-beta.6"
+    cellar :any
+
+    sha256 "8136c33316600b12b7c388a2055cb20875b3817d185a820100e0228916419987" => :big_sur
+    sha256 "bdd665bf19fbe86a96dbbd7dd7f1f8ec0878991e81b3ee05bb12e66fca53f903" => :catalina
+  end
+
   license "MIT"
 
   head "https://github.com/SwiftDocOrg/swift-doc.git", shallow: false
 
   depends_on xcode: ["12", :build]
   depends_on "graphviz"
-
-  
 
   def install
     system "swift", "build",
