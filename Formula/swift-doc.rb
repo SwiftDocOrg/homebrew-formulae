@@ -4,17 +4,12 @@
 class SwiftDoc < Formula
   desc "Swift documentation generator"
   homepage "https://github.com/SwiftDocOrg/swift-doc"
-  url "https://github.com/SwiftDocOrg/swift-doc.git", tag: "1.0.0-beta.6", revision: "81f2d3a1731204693f41929b76b33e2abb5e4b4c"
+  url "https://github.com/SwiftDocOrg/swift-doc.git", tag: "1.0.0-rc.1", revision: "7dfb210585a72a34080575adb1edf041889a6eb4"
 
   license "MIT"
   head "https://github.com/SwiftDocOrg/swift-doc.git", shallow: false
 
-  bottle do
-    root_url "https://github.com/SwiftDocOrg/swift-doc/releases/download/1.0.0-beta.6"
-
-    sha256 cellar: :any, big_sur:  "8136c33316600b12b7c388a2055cb20875b3817d185a820100e0228916419987"
-    sha256 cellar: :any, catalina: "bdd665bf19fbe86a96dbbd7dd7f1f8ec0878991e81b3ee05bb12e66fca53f903"
-  end
+  
 
   depends_on xcode: ["12", :build]
   depends_on "graphviz"
