@@ -7,6 +7,14 @@ class SwiftDoc < Formula
   url "https://github.com/SwiftDocOrg/swift-doc.git", tag: "1.0.0-rc.1", revision: "f935ebfe524a0ff27bda07dadc3662e3e45b5125"
 
   license "MIT"
+
+  bottle do
+    root_url "https://github.com/SwiftDocOrg/swift-doc/releases/download/1.0.0-rc.1"
+    rebuild 1
+    sha256 cellar: :any, big_sur: "facc5a29dd94781561b7a6ed3e8c2173e1a47132114adbb0e280bd77323e74f6"
+    sha256 cellar: :any, catalina: "5c8db14f65e320906973e682ead065e4ed888c626d632a274227086d7bc41fbb"
+  end
+
   head "https://github.com/SwiftDocOrg/swift-doc.git", shallow: false
 
   depends_on xcode: ["12", :build]
